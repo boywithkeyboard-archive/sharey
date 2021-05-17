@@ -1,0 +1,6 @@
+# Sharey.js
+
+### Installation
+```JavaScript
+
+```

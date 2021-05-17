@@ -1,0 +1,21 @@
+{
+  "name": "sharey",
+  "version": "0.0.1",
+  "description": "",
+  "main": "sharey.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/realazury/sharey.git"
+  },
+  "keywords": [
+    "sharing",
+    "file",
+    "upload"
+  ],
+  "author": "realazury",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/realazury/sharey/issues"
+  },
+  "homepage": "https://github.com/realazury/sharey#readme"
+}
