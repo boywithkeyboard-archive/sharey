@@ -4,7 +4,7 @@ Sharey is a powerful addon with a size of less than **1.5 KB** that is designed 
 
 ### Setup w/ CDN
 ```HTML
-<script src="https://cdn.jsdelivr.net/npm/sharey@1/sharey.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sharey@1"></script>
 ```
 
 ### Local Setup
