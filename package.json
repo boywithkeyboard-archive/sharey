@@ -1,8 +1,8 @@
 {
   "name": "sharey",
-  "version": "0.0.1",
-  "description": "",
-  "main": "sharey.js",
+  "version": "1.0.0",
+  "description": "Sharey, a small but powerful addon designed to help you upload files to third parties with ease.",
+  "main": "sharey.min.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/realazury/sharey.git"
@@ -10,10 +10,13 @@
   "keywords": [
     "sharing",
     "file",
-    "upload"
+    "upload",
+    "starfiles",
+    "azury",
+    "gofile"
   ],
   "author": "realazury",
-  "license": "MIT",
+  "license": "Apache-2.0 License",
   "bugs": {
     "url": "https://github.com/realazury/sharey/issues"
   },

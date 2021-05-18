@@ -1,0 +1,24 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo</title>
+  </head>
+
+  <body>
+    <input class="fileInput" type="file">
+    <button onclick="uploadFile()">Upload</button>
+
+    <script src="https://cdn.jsdelivr.net/npm/sharey@1"></script>
+    <script>
+      function uploadFile() {
+        const file = document.querySelector('.fileInput').files[0]
+
+        sharey.azury(file, (res) => {
+          console.log(res)
+        })
+      }
+    </script>
+  </body>
+</html>
