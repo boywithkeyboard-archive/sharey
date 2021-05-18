@@ -13,7 +13,9 @@
     "upload",
     "starfiles",
     "azury",
-    "gofile"
+    "gofile",
+    "filesharing",
+    "small"
   ],
   "author": "realazury",
   "license": "Apache-2.0 License",
