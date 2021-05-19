@@ -2,6 +2,8 @@
 
 Sharey is a powerful addon with a size of less than **1.5 KB** that is designed to help you upload files to third parties with ease.
 
+![https://www.jsdelivr.com/package/npm/sharey](https://data.jsdelivr.com/v1/package/npm/sharey/badge/rank?style=rounded) ![https://www.jsdelivr.com/package/npm/sharey](https://data.jsdelivr.com/v1/package/npm/sharey/badge?style=rounded)
+
 ### Setup w/ CDN
 ```HTML
 <script src="https://cdn.jsdelivr.net/npm/sharey@1"></script>
