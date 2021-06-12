@@ -7,7 +7,7 @@ Sharey is a powerful addon with a size of less than **2 KB** that is designed to
 ### Key Features
 - handle file uploads
 - generate unique IDs for each upload
-- get upload date for each upload
+- get the upload date for each upload
 
 ### Setup w/ CDN
 ```HTML
