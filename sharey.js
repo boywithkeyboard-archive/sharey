@@ -63,6 +63,22 @@ const sharey = {
     })
   },
 
+  coffee(file, callback) {
+    uploadHandler('https://file.coffee/api/file/upload', 'file', file, (res) => {
+      const data = {
+        'name': file.name,
+        'token': res.name,
+        'size': file.size,
+        'readableSize': readableSize(file.size),
+        'type': file.type,
+        'url': res.url,
+        'uploadedAt': Date.now()
+      }
+
+      if (callback) callback(data)
+    })
+  },
+
   // gofile.io
   async gofile(file, callback) {
     fetch('https://api.gofile.io/getServer', { method: 'GET' })
