@@ -5,7 +5,7 @@
   "main": "sharey.min.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/realazury/sharey.git"
+    "url": "git+https://github.com/unrealazury/sharey.git"
   },
   "keywords": [
     "sharing",
@@ -21,7 +21,7 @@
   "author": "realazury",
   "license": "Apache-2.0 License",
   "bugs": {
-    "url": "https://github.com/realazury/sharey/issues"
+    "url": "https://github.com/unrealazury/sharey/issues"
   },
-  "homepage": "https://github.com/realazury/sharey#readme"
+  "homepage": "https://github.com/unrealazury/sharey#readme"
 }
