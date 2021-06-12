@@ -27,7 +27,7 @@ sharey.azury(file, (res) => { // replace 'azury' with your desired service
 })
 ```
 
-### Services
-- [Azury](https://azury.gg)
-- [Starfiles](https://starfiles.co)
-- [Gofile](https://gofile.io)
+### Providers
+- [azury](https://azury.gg)
+- [starfiles](https://starfiles.co)
+- [gofile](https://gofile.io)
