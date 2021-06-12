@@ -6,7 +6,7 @@ Sharey is a powerful addon with a size of less than **1.5 KB** that is designed 
 
 ### Setup w/ CDN
 ```HTML
-<script src="https://cdn.jsdelivr.net/npm/sharey@1"></script>
+<script src="https://cdn.jsdelivr.net/npm/sharey@1.1.0"></script>
 ```
 
 ### Local Setup
@@ -29,3 +29,4 @@ sharey.azury(file, (res) => { // replace 'azury' with your desired service
 - [azury](https://azury.gg)
 - [starfiles](https://starfiles.co)
 - [gofile](https://gofile.io)
+- [coffee](https://file.coffee)
