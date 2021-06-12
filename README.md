@@ -30,6 +30,8 @@ sharey.azury(file, (res) => { // replace 'azury' with your desired service
 })
 ```
 
+Please refer to [this](https://github.com/unrealazury/sharey/tree/main/example) for a full example.
+
 ### Sample Response
 ```JavaScript
 {
