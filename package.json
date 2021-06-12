@@ -1,6 +1,6 @@
 {
   "name": "sharey",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Sharey, a small but powerful addon designed to help you upload files to third parties with ease.",
   "main": "sharey.min.js",
   "repository": {
