@@ -4,8 +4,6 @@ Sharey is a powerful addon with a size of less than **1.5 KB** that is designed 
 
 ![https://www.jsdelivr.com/package/npm/sharey](https://data.jsdelivr.com/v1/package/npm/sharey/badge/rank?style=rounded) ![https://www.jsdelivr.com/package/npm/sharey](https://data.jsdelivr.com/v1/package/npm/sharey/badge?style=rounded) ![https://www.jsdelivr.com/package/npm/sharey](https://img.shields.io/npm/dt/sharey?label=Downloads)
 
-> I'm only fixing bugs at the moment and do not add any new features, because I've found no other accountless file-sharing services with a public API.
-
 ### Setup w/ CDN
 ```HTML
 <script src="https://cdn.jsdelivr.net/npm/sharey@1"></script>
