@@ -41,7 +41,7 @@ Please refer to [this](https://github.com/unrealazury/sharey/tree/main/example) 
   token: "DfBQ1FytcPZMz06c4mvgRE25Lg_wtsCD",
   type: "image/png",
   uploadedAt: 1623503959635,
-  url: "https://azury.gg/a/file.png"
+  url: "https://azury.gg/a/654743ef4111e60a0c8667f5"
 }
 ```
 
