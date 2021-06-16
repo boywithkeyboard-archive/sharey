@@ -13,11 +13,9 @@ function uploadHandler(endpoint, param, file, callback) {
 
   fetch(endpoint, { method: 'POST', body: formData })
     .then((response) => {
-      response.json()
-        .then((data) => {
-          data.shareyToken = code
-          callback(data) 
-        })
+      const data = response.json()
+      data.stoken = code
+      callback(data)
     })
 }
 
@@ -26,7 +24,7 @@ function readableSize(size) {
   size = size.toString()
   const length = size.length
   const round = (number, decimalPlaces) => {
-    number = Math.round(number + 'e' + decimalPlaces);
+    number = Math.round(number + 'e' +decimalPlaces)
     return Number(number + 'e' + -decimalPlaces)
   }
 
@@ -43,7 +41,7 @@ const sharey = {
     uploadHandler('https://azury.gg/api/accountless/files/new', 'upload', file, (res) => {
       const data = {
         'name': file.name,
-        'token': res.shareyToken,
+        'token': res.stoken,
         'size': file.size,
         'readableSize': readableSize(file.size),
         'type': file.type,
@@ -60,7 +58,7 @@ const sharey = {
     uploadHandler('https://api.starfiles.co/upload/upload_file', 'upload', file, (res) => {
       const data = {
         'name': file.name,
-        'token': res.shareyToken,
+        'token': res.stoken,
         'size': file.size,
         'readableSize': readableSize(file.size),
         'type': file.type,
@@ -76,7 +74,7 @@ const sharey = {
     uploadHandler('https://file.coffee/api/file/upload', 'file', file, (res) => {
       const data = {
         'name': file.name,
-        'token': res.shareyToken,
+        'token': res.stoken,
         'size': file.size,
         'readableSize': readableSize(file.size),
         'type': file.type,
@@ -97,7 +95,7 @@ const sharey = {
           uploadHandler(`https://${service.data.server}.gofile.io/uploadFile`, 'file', file, (res) => {
             const data = {
               'name': file.name,
-              'token': res.shareyToken,
+              'token': res.stoken,
               'size': file.size,
               'readableSize': readableSize(file.size),
               'type': file.type,
