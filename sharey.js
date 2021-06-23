@@ -1,5 +1,11 @@
-// handle file upload
-function uploadHandler(endpoint, param, file, callback) {
+/*!
+ *  Sharey 1.1.2 by @unrealazury - https://azury.dev - @azuryofficial
+ *  License - Apache 2.0
+ */
+
+/**************** HANDLE UPLOAD ****************/
+
+async function shareyHandler(endpoint, param, file, callback) {
   const formData = new FormData()
   formData.append(param, file)
 
@@ -11,16 +17,15 @@ function uploadHandler(endpoint, param, file, callback) {
     charactersLength))
   }
 
-  fetch(endpoint, { method: 'POST', body: formData })
-    .then((response) => {
-      const data = response.json()
-      data.stoken = code
-      callback(data)
-    })
+  const response = await fetch(endpoint, { method: 'POST', body: formData })
+  const data = response.json()
+  data.shareyKey = code
+  callback(data)
 }
 
-// get readable size
-function readableSize(size) {
+/**************** GET READABLE SIZE ****************/
+
+function shareySize(size) {
   size = size.toString()
   const length = size.length
   const round = (number, decimalPlaces) => {
@@ -36,14 +41,16 @@ function readableSize(size) {
 }
 
 const sharey = {
-  // azury.gg
+
+  /**************** AZURY.GG ****************/
+
   azury(file, callback) {
-    uploadHandler('https://azury.gg/api/accountless/files/new', 'upload', file, (res) => {
+    shareyHandler('https://azury.gg/api/accountless/files/new', 'upload', file, (res) => {
       const data = {
         'name': file.name,
-        'token': res.stoken,
+        'token': res.shareyKey,
         'size': file.size,
-        'readableSize': readableSize(file.size),
+        'readableSize': shareySize(file.size),
         'type': file.type,
         'url': res.url,
         'uploadedAt': Date.now()
@@ -53,14 +60,54 @@ const sharey = {
     })
   },
 
-  // starfiles.co
-  starfiles(file, callback) {
-    uploadHandler('https://api.starfiles.co/upload/upload_file', 'upload', file, (res) => {
+  /**************** FILE.COFFEE ****************/
+
+  coffee(file, callback) {
+    shareyHandler('https://file.coffee/api/file/upload', 'file', file, (res) => {
       const data = {
         'name': file.name,
-        'token': res.stoken,
+        'token': res.shareyKey,
         'size': file.size,
-        'readableSize': readableSize(file.size),
+        'readableSize': shareySize(file.size),
+        'type': file.type,
+        'url': res.url,
+        'uploadedAt': Date.now()
+      }
+
+      if (callback) callback(data)
+    })
+  },
+
+  /**************** GOFILE.IO ****************/
+
+  async gofile(file, callback) {
+    const response = await fetch('https://api.gofile.io/getServer', { method: 'GET' })
+    const service = response.json()
+
+    shareyHandler(`https://${service.data.server}.gofile.io/uploadFile`, 'file', file, (res) => {
+      const data = {
+        'name': file.name,
+        'token': res.shareyKey,
+        'size': file.size,
+        'readableSize': shareySize(file.size),
+        'type': file.type,
+        'url': res.data.downloadPage,
+        'uploadedAt': Date.now()
+      }
+
+      if (callback) callback(data)
+    })
+  },
+
+  /**************** STARFILES.CO ****************/
+
+  starfiles(file, callback) {
+    shareyHandler('https://api.starfiles.co/upload/upload_file', 'upload', file, (res) => {
+      const data = {
+        'name': file.name,
+        'token': res.shareyKey,
+        'size': file.size,
+        'readableSize': shareySize(file.size),
         'type': file.type,
         'url': `https://starfiles.co/file/${res.file}`,
         'uploadedAt': Date.now()
@@ -68,44 +115,6 @@ const sharey = {
 
       if (callback) callback(data)
     })
-  },
-
-  coffee(file, callback) {
-    uploadHandler('https://file.coffee/api/file/upload', 'file', file, (res) => {
-      const data = {
-        'name': file.name,
-        'token': res.stoken,
-        'size': file.size,
-        'readableSize': readableSize(file.size),
-        'type': file.type,
-        'url': res.url,
-        'uploadedAt': Date.now()
-      }
-
-      if (callback) callback(data)
-    })
-  },
-
-  // gofile.io
-  async gofile(file, callback) {
-    fetch('https://api.gofile.io/getServer', { method: 'GET' })
-    .then((response) => {
-      response.json()
-        .then((service) => { 
-          uploadHandler(`https://${service.data.server}.gofile.io/uploadFile`, 'file', file, (res) => {
-            const data = {
-              'name': file.name,
-              'token': res.stoken,
-              'size': file.size,
-              'readableSize': readableSize(file.size),
-              'type': file.type,
-              'url': res.data.downloadPage,
-              'uploadedAt': Date.now()
-            }
-      
-            if (callback) callback(data)
-          })
-        })
-    })
   }
+
 }
