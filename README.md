@@ -1,25 +1,25 @@
-# Sharey.js
+# sharey.js
 
-Sharey is a powerful addon with a size of less than **2 KB** that is designed to help you upload files to third parties with ease.
+sharey is a powerful addon with a size of less than **2 KB** that is designed to help you upload files to third parties with ease.
 
 ![https://www.jsdelivr.com/package/npm/sharey](https://data.jsdelivr.com/v1/package/npm/sharey/badge/rank?style=rounded) ![https://www.jsdelivr.com/package/npm/sharey](https://data.jsdelivr.com/v1/package/npm/sharey/badge?style=rounded) ![https://www.jsdelivr.com/package/npm/sharey](https://img.shields.io/npm/dt/sharey?label=Downloads)
 
-### Key Features
+### key keatures
 - handle file uploads
 - generate unique IDs for each upload
 - get the upload date for each upload
 
-### Setup w/ CDN
+### setup w/ cdn
 ```HTML
 <script src="https://cdn.jsdelivr.net/npm/sharey@1.1.2"></script>
 ```
 
-### Local Setup
+### local setup
 ```HTML
 <script src="path/to/sharey.min.js"></script>
 ```
 
-### Usage
+### usage
 ```JavaScript
 // get value of file input
 const file = document.querySelector('.fileInput').files[0]
@@ -30,9 +30,9 @@ sharey.azury(file, (res) => { // replace 'azury' with your desired service
 })
 ```
 
-Please refer to [this](https://github.com/unrealazury/sharey/tree/main/example) for a full example.
+please refer to [this](https://github.com/unrealazury/sharey/tree/main/example) for a full example.
 
-### Sample Response
+### sample response
 ```JavaScript
 {
   name: "file.png",
@@ -45,7 +45,7 @@ Please refer to [this](https://github.com/unrealazury/sharey/tree/main/example) 
 }
 ```
 
-### Providers
+### providers
 - [azury](https://azury.gg)
 - [starfiles](https://starfiles.co)
 - [gofile](https://gofile.io)
