@@ -1,5 +1,7 @@
 # sharey.js
 
+> ⚠️ Some features might not work as expected. **We're currently working on [v2](), going in public beta on *[December 30, 2021]()!*** v2 will support Node.js and browser with a ton of additional features! ⚠️
+
 sharey is a powerful addon with a size of less than **2 KB** that is designed to help you upload files to third parties with ease.
 
 ![https://www.jsdelivr.com/package/npm/sharey](https://data.jsdelivr.com/v1/package/npm/sharey/badge/rank?style=rounded) ![https://www.jsdelivr.com/package/npm/sharey](https://data.jsdelivr.com/v1/package/npm/sharey/badge?style=rounded) ![https://www.jsdelivr.com/package/npm/sharey](https://img.shields.io/npm/dt/sharey?label=Downloads)
